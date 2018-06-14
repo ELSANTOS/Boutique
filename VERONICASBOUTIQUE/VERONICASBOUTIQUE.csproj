@@ -252,5 +252,8 @@
   <ItemGroup>
     <None Include="Resources\PAY.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACK.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
