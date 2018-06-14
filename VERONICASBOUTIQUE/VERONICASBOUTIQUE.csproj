@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9742C83-B86D-4212-8046-BD5A8CE8D51A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VERONICASBOUTIQUE</RootNamespace>
+    <AssemblyName>VERONICASBOUTIQUE</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadeUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadeUsuarios.Designer.cs">
+      <DependentUpon>ListadeUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PVenta.Designer.cs">
+      <DependentUpon>PVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadeUsuarios.resx">
+      <DependentUpon>ListadeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PVenta.resx">
+      <DependentUpon>PVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veronicas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrar1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevousuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminarusuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listausuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regresar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevoproducto.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminarproducto.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listaproductos.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADDUSER.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HOME.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SALES.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRODUCTS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REPORTS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USERS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXIT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ACCEPTED.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CANCELED.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADDUSER1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DELETEUSER.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USERLIST.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HOME1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADD.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DELETE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEW.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PRINTER.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SAVE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\START.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PAY.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
