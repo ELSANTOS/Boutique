@@ -41,6 +41,11 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtReporte = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSubMenu = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnReporteInventarios = new System.Windows.Forms.Button();
+            this.btnReporteVentas = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,11 +54,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.tmrFechaHora = new System.Windows.Forms.Timer(this.components);
-            this.pnlSubMenu = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnReporteVentas = new System.Windows.Forms.Button();
-            this.btnReporteInventarios = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlSubMenu.SuspendLayout();
@@ -193,6 +193,66 @@
             this.panel2.Size = new System.Drawing.Size(464, 88);
             this.panel2.TabIndex = 61;
             // 
+            // pnlSubMenu
+            // 
+            this.pnlSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlSubMenu.Controls.Add(this.panel10);
+            this.pnlSubMenu.Controls.Add(this.panel9);
+            this.pnlSubMenu.Controls.Add(this.btnReporteInventarios);
+            this.pnlSubMenu.Controls.Add(this.btnReporteVentas);
+            this.pnlSubMenu.Location = new System.Drawing.Point(165, 17);
+            this.pnlSubMenu.Name = "pnlSubMenu";
+            this.pnlSubMenu.Size = new System.Drawing.Size(79, 49);
+            this.pnlSubMenu.TabIndex = 71;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel10.Location = new System.Drawing.Point(68, 23);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(11, 26);
+            this.panel10.TabIndex = 72;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel9.Location = new System.Drawing.Point(68, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(11, 22);
+            this.panel9.TabIndex = 53;
+            // 
+            // btnReporteInventarios
+            // 
+            this.btnReporteInventarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnReporteInventarios.FlatAppearance.BorderSize = 0;
+            this.btnReporteInventarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnReporteInventarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteInventarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReporteInventarios.Location = new System.Drawing.Point(0, 25);
+            this.btnReporteInventarios.Name = "btnReporteInventarios";
+            this.btnReporteInventarios.Size = new System.Drawing.Size(76, 22);
+            this.btnReporteInventarios.TabIndex = 73;
+            this.btnReporteInventarios.Text = "Inventarios";
+            this.btnReporteInventarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporteInventarios.UseVisualStyleBackColor = false;
+            this.btnReporteInventarios.Click += new System.EventHandler(this.btnReporteInventarios_Click);
+            // 
+            // btnReporteVentas
+            // 
+            this.btnReporteVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnReporteVentas.FlatAppearance.BorderSize = 0;
+            this.btnReporteVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReporteVentas.Location = new System.Drawing.Point(1, 0);
+            this.btnReporteVentas.Name = "btnReporteVentas";
+            this.btnReporteVentas.Size = new System.Drawing.Size(75, 22);
+            this.btnReporteVentas.TabIndex = 54;
+            this.btnReporteVentas.Text = "Ventas";
+            this.btnReporteVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporteVentas.UseVisualStyleBackColor = false;
+            this.btnReporteVentas.Click += new System.EventHandler(this.btnReporteVentas_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -282,66 +342,6 @@
             // 
             this.tmrFechaHora.Enabled = true;
             this.tmrFechaHora.Tick += new System.EventHandler(this.tmrFechaHora_Tick);
-            // 
-            // pnlSubMenu
-            // 
-            this.pnlSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pnlSubMenu.Controls.Add(this.panel10);
-            this.pnlSubMenu.Controls.Add(this.panel9);
-            this.pnlSubMenu.Controls.Add(this.btnReporteInventarios);
-            this.pnlSubMenu.Controls.Add(this.btnReporteVentas);
-            this.pnlSubMenu.Location = new System.Drawing.Point(165, 17);
-            this.pnlSubMenu.Name = "pnlSubMenu";
-            this.pnlSubMenu.Size = new System.Drawing.Size(79, 49);
-            this.pnlSubMenu.TabIndex = 71;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel9.Location = new System.Drawing.Point(68, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(11, 22);
-            this.panel9.TabIndex = 53;
-            // 
-            // btnReporteVentas
-            // 
-            this.btnReporteVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnReporteVentas.FlatAppearance.BorderSize = 0;
-            this.btnReporteVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReporteVentas.Location = new System.Drawing.Point(1, 0);
-            this.btnReporteVentas.Name = "btnReporteVentas";
-            this.btnReporteVentas.Size = new System.Drawing.Size(75, 22);
-            this.btnReporteVentas.TabIndex = 54;
-            this.btnReporteVentas.Text = "Ventas";
-            this.btnReporteVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReporteVentas.UseVisualStyleBackColor = false;
-            this.btnReporteVentas.Click += new System.EventHandler(this.btnReporteVentas_Click);
-            // 
-            // btnReporteInventarios
-            // 
-            this.btnReporteInventarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnReporteInventarios.FlatAppearance.BorderSize = 0;
-            this.btnReporteInventarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnReporteInventarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteInventarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReporteInventarios.Location = new System.Drawing.Point(0, 25);
-            this.btnReporteInventarios.Name = "btnReporteInventarios";
-            this.btnReporteInventarios.Size = new System.Drawing.Size(76, 22);
-            this.btnReporteInventarios.TabIndex = 73;
-            this.btnReporteInventarios.Text = "Inventarios";
-            this.btnReporteInventarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReporteInventarios.UseVisualStyleBackColor = false;
-            this.btnReporteInventarios.Click += new System.EventHandler(this.btnReporteInventarios_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel10.Location = new System.Drawing.Point(68, 23);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(11, 26);
-            this.panel10.TabIndex = 72;
             // 
             // Reportes
             // 

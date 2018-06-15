@@ -33,19 +33,13 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnListaUsuario = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnPrincipal = new System.Windows.Forms.Button();
             this.txtRoles = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
@@ -61,8 +55,19 @@
             this.txtClaveUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tmrFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnListaUsuario = new System.Windows.Forms.Button();
+            this.btnPrincipal = new System.Windows.Forms.Button();
+            this.pbxFoto = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,7 +78,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 37);
+            this.panel1.Size = new System.Drawing.Size(547, 37);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -98,54 +103,24 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel7.Location = new System.Drawing.Point(224, 361);
+            this.panel7.Location = new System.Drawing.Point(276, 362);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(93, 16);
             this.panel7.TabIndex = 58;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(224)))), ((int)(((byte)(251)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Image = global::VERONICASBOUTIQUE.Properties.Resources.CANCELED;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(224, 302);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(93, 63);
-            this.btnCancelar.TabIndex = 59;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel6.Location = new System.Drawing.Point(119, 361);
+            this.panel6.Location = new System.Drawing.Point(171, 362);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(93, 16);
             this.panel6.TabIndex = 56;
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(224)))), ((int)(((byte)(251)))));
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Image = global::VERONICASBOUTIQUE.Properties.Resources.ACCEPTED;
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAceptar.Location = new System.Drawing.Point(119, 302);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(93, 63);
-            this.btnAceptar.TabIndex = 57;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnEliminar);
@@ -158,13 +133,13 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 37);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(463, 83);
+            this.panel2.Size = new System.Drawing.Size(547, 83);
             this.panel2.TabIndex = 55;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel3.Location = new System.Drawing.Point(226, 0);
+            this.panel3.Location = new System.Drawing.Point(309, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(78, 16);
             this.panel3.TabIndex = 37;
@@ -172,44 +147,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel4.Location = new System.Drawing.Point(148, 0);
+            this.panel4.Location = new System.Drawing.Point(156, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(78, 16);
             this.panel4.TabIndex = 35;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Image = global::VERONICASBOUTIQUE.Properties.Resources.DELETE;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(226, 15);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(78, 67);
-            this.btnEliminar.TabIndex = 44;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Image = global::VERONICASBOUTIQUE.Properties.Resources.NEW;
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAgregar.Location = new System.Drawing.Point(148, 15);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(78, 67);
-            this.btnAgregar.TabIndex = 43;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label3
             // 
@@ -224,56 +165,22 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel5.Location = new System.Drawing.Point(304, 0);
+            this.panel5.Location = new System.Drawing.Point(387, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(78, 16);
             this.panel5.TabIndex = 40;
             // 
-            // btnListaUsuario
-            // 
-            this.btnListaUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnListaUsuario.FlatAppearance.BorderSize = 0;
-            this.btnListaUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnListaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaUsuario.Image = global::VERONICASBOUTIQUE.Properties.Resources.USERLIST;
-            this.btnListaUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListaUsuario.Location = new System.Drawing.Point(304, 12);
-            this.btnListaUsuario.Name = "btnListaUsuario";
-            this.btnListaUsuario.Size = new System.Drawing.Size(78, 71);
-            this.btnListaUsuario.TabIndex = 41;
-            this.btnListaUsuario.Text = "Lista Usuarios";
-            this.btnListaUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnListaUsuario.UseVisualStyleBackColor = false;
-            this.btnListaUsuario.Click += new System.EventHandler(this.btnListaUsuario_Click);
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel8.Location = new System.Drawing.Point(382, 0);
+            this.panel8.Location = new System.Drawing.Point(465, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(80, 16);
             this.panel8.TabIndex = 37;
             // 
-            // btnPrincipal
-            // 
-            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnPrincipal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.Image = global::VERONICASBOUTIQUE.Properties.Resources.HOME1;
-            this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPrincipal.Location = new System.Drawing.Point(382, 15);
-            this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(78, 68);
-            this.btnPrincipal.TabIndex = 38;
-            this.btnPrincipal.Text = "Menu Principal";
-            this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPrincipal.UseVisualStyleBackColor = false;
-            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
-            // 
             // txtRoles
             // 
-            this.txtRoles.Location = new System.Drawing.Point(319, 199);
+            this.txtRoles.Location = new System.Drawing.Point(309, 247);
             this.txtRoles.Name = "txtRoles";
             this.txtRoles.Size = new System.Drawing.Size(134, 20);
             this.txtRoles.TabIndex = 54;
@@ -281,7 +188,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(229, 206);
+            this.label15.Location = new System.Drawing.Point(219, 254);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(88, 13);
             this.label15.TabIndex = 53;
@@ -289,7 +196,7 @@
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(319, 170);
+            this.txtContra.Location = new System.Drawing.Point(309, 218);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(134, 20);
             this.txtContra.TabIndex = 52;
@@ -297,7 +204,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(270, 151);
+            this.label14.Location = new System.Drawing.Point(260, 199);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 13);
             this.label14.TabIndex = 51;
@@ -305,7 +212,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(319, 144);
+            this.txtUsuario.Location = new System.Drawing.Point(309, 192);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(134, 20);
             this.txtUsuario.TabIndex = 50;
@@ -313,7 +220,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(247, 177);
+            this.label12.Location = new System.Drawing.Point(237, 225);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 13);
             this.label12.TabIndex = 49;
@@ -373,6 +280,7 @@
             this.txtClaveUsuario.Name = "txtClaveUsuario";
             this.txtClaveUsuario.Size = new System.Drawing.Size(129, 20);
             this.txtClaveUsuario.TabIndex = 42;
+            this.txtClaveUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClaveUsuario_KeyDown);
             // 
             // label1
             // 
@@ -388,14 +296,160 @@
             this.tmrFechaHora.Enabled = true;
             this.tmrFechaHora.Tick += new System.EventHandler(this.tmrFechaHora_Tick);
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel9.Location = new System.Drawing.Point(234, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(78, 16);
+            this.panel9.TabIndex = 45;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(224)))), ((int)(((byte)(251)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Image = global::VERONICASBOUTIQUE.Properties.Resources.CANCELED;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(276, 303);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(93, 63);
+            this.btnCancelar.TabIndex = 59;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(224)))), ((int)(((byte)(251)))));
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Image = global::VERONICASBOUTIQUE.Properties.Resources.ACCEPTED;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAceptar.Location = new System.Drawing.Point(171, 303);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(93, 63);
+            this.btnAceptar.TabIndex = 57;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Image = global::VERONICASBOUTIQUE.Properties.Resources.EDIT;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(234, 15);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(78, 67);
+            this.btnEditar.TabIndex = 46;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Image = global::VERONICASBOUTIQUE.Properties.Resources.DELETE;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(309, 15);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(78, 67);
+            this.btnEliminar.TabIndex = 44;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Image = global::VERONICASBOUTIQUE.Properties.Resources.ADD;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregar.Location = new System.Drawing.Point(156, 15);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(78, 67);
+            this.btnAgregar.TabIndex = 43;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnListaUsuario
+            // 
+            this.btnListaUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnListaUsuario.FlatAppearance.BorderSize = 0;
+            this.btnListaUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnListaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaUsuario.Image = global::VERONICASBOUTIQUE.Properties.Resources.USERLIST;
+            this.btnListaUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnListaUsuario.Location = new System.Drawing.Point(387, 12);
+            this.btnListaUsuario.Name = "btnListaUsuario";
+            this.btnListaUsuario.Size = new System.Drawing.Size(78, 70);
+            this.btnListaUsuario.TabIndex = 41;
+            this.btnListaUsuario.Text = "Lista Usuarios";
+            this.btnListaUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnListaUsuario.UseVisualStyleBackColor = false;
+            this.btnListaUsuario.Click += new System.EventHandler(this.btnListaUsuario_Click);
+            // 
+            // btnPrincipal
+            // 
+            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnPrincipal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrincipal.Image = global::VERONICASBOUTIQUE.Properties.Resources.HOME1;
+            this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPrincipal.Location = new System.Drawing.Point(465, 15);
+            this.btnPrincipal.Name = "btnPrincipal";
+            this.btnPrincipal.Size = new System.Drawing.Size(78, 67);
+            this.btnPrincipal.TabIndex = 38;
+            this.btnPrincipal.Text = "Menu Principal";
+            this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPrincipal.UseVisualStyleBackColor = false;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
+            // 
+            // pbxFoto
+            // 
+            this.pbxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxFoto.Location = new System.Drawing.Point(451, 125);
+            this.pbxFoto.Name = "pbxFoto";
+            this.pbxFoto.Size = new System.Drawing.Size(92, 94);
+            this.pbxFoto.TabIndex = 60;
+            this.pbxFoto.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(465, 167);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Agregar Foto";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(254)))));
-            this.ClientSize = new System.Drawing.Size(463, 378);
+            this.ClientSize = new System.Drawing.Size(547, 378);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pbxFoto);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel6);
@@ -425,6 +479,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,5 +519,9 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer tmrFechaHora;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.PictureBox pbxFoto;
+        private System.Windows.Forms.Label label4;
     }
 }

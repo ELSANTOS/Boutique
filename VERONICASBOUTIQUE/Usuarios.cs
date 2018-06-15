@@ -54,6 +54,7 @@ namespace VERONICASBOUTIQUE
         {
             txtClaveUsuario.Enabled = true;
             txtNombreUsuario.Enabled = false;
+            txtClaveUsuario.Focus();
             txtApellidoPatUsuario.Enabled = false;
             txtApellidoMatUsuario.Enabled = false;
             txtUsuario.Enabled = false;
@@ -68,6 +69,7 @@ namespace VERONICASBOUTIQUE
             txtNombreUsuario.Enabled = true;
             txtApellidoPatUsuario.Enabled = true;
             txtApellidoMatUsuario.Enabled = true;
+            txtClaveUsuario.Focus();
             txtUsuario.Enabled = true;
             txtContra.Enabled = true;
             txtRoles.Enabled = true;
@@ -90,6 +92,39 @@ namespace VERONICASBOUTIQUE
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtClaveUsuario.Enabled = true;
+            txtNombreUsuario.Enabled = false;
+            txtClaveUsuario.Focus();
+            txtApellidoPatUsuario.Enabled = false;
+            txtApellidoMatUsuario.Enabled = false;
+            txtUsuario.Enabled = false;
+            txtContra.Enabled = false;
+            txtRoles.Enabled = false;
+        }
+
+        private void txtClaveUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.F4)
+            {
+                ListadeUsuarios frmLista = new ListadeUsuarios("usuarios");
+                frmLista.Show();
+                this.Hide();
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtClaveUsuario.Enabled = false;
+                txtNombreUsuario.Enabled = true;
+                txtNombreUsuario.Focus();
+                txtApellidoPatUsuario.Enabled = true;
+                txtApellidoMatUsuario.Enabled = true;
+                txtUsuario.Enabled = true;
+                txtContra.Enabled = true;
+                txtRoles.Enabled = true;
+            }
         }
     }
 }

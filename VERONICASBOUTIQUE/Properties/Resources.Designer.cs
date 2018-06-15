@@ -113,16 +113,6 @@ namespace VERONICASBOUTIQUE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cancelar {
-            get {
-                object obj = ResourceManager.GetObject("cancelar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap CANCELED {
             get {
                 object obj = ResourceManager.GetObject("CANCELED", resourceCulture);
@@ -153,39 +143,9 @@ namespace VERONICASBOUTIQUE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eliminarproducto {
+        internal static System.Drawing.Bitmap EDIT {
             get {
-                object obj = ResourceManager.GetObject("eliminarproducto", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap eliminarusuario {
-            get {
-                object obj = ResourceManager.GetObject("eliminarusuario", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap entrar {
-            get {
-                object obj = ResourceManager.GetObject("entrar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap entrar1 {
-            get {
-                object obj = ResourceManager.GetObject("entrar1", resourceCulture);
+                object obj = ResourceManager.GetObject("EDIT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,49 +183,9 @@ namespace VERONICASBOUTIQUE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap listaproductos {
-            get {
-                object obj = ResourceManager.GetObject("listaproductos", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap listausuarios {
-            get {
-                object obj = ResourceManager.GetObject("listausuarios", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap NEW {
             get {
                 object obj = ResourceManager.GetObject("NEW", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap nuevoproducto {
-            get {
-                object obj = ResourceManager.GetObject("nuevoproducto", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap nuevousuario {
-            get {
-                object obj = ResourceManager.GetObject("nuevousuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,26 +203,6 @@ namespace VERONICASBOUTIQUE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap principal {
-            get {
-                object obj = ResourceManager.GetObject("principal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap principal1 {
-            get {
-                object obj = ResourceManager.GetObject("principal1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap PRINTER {
             get {
                 object obj = ResourceManager.GetObject("PRINTER", resourceCulture);
@@ -313,49 +213,9 @@ namespace VERONICASBOUTIQUE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap productos {
-            get {
-                object obj = ResourceManager.GetObject("productos", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap PRODUCTS {
             get {
                 object obj = ResourceManager.GetObject("PRODUCTS", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap regresar {
-            get {
-                object obj = ResourceManager.GetObject("regresar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap reportes {
-            get {
-                object obj = ResourceManager.GetObject("reportes", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap reportes1 {
-            get {
-                object obj = ResourceManager.GetObject("reportes1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,16 +236,6 @@ namespace VERONICASBOUTIQUE.Properties {
         internal static System.Drawing.Bitmap SALES {
             get {
                 object obj = ResourceManager.GetObject("SALES", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap salir {
-            get {
-                object obj = ResourceManager.GetObject("salir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,29 +283,9 @@ namespace VERONICASBOUTIQUE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap usuarios {
-            get {
-                object obj = ResourceManager.GetObject("usuarios", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap v2 {
             get {
                 object obj = ResourceManager.GetObject("v2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ventas {
-            get {
-                object obj = ResourceManager.GetObject("ventas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

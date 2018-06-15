@@ -19,6 +19,7 @@ namespace VERONICASBOUTIQUE
             InitializeComponent();
             Reg = reg;
             lblLista.Text = "LISTA DE " + reg.ToUpper();
+            txtCoincidir.Focus();
         }
 
         private void pbxRegresar_Click(object sender, EventArgs e)

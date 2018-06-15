@@ -17,6 +17,7 @@ namespace VERONICASBOUTIQUE
         {
             InitializeComponent();
             txtCantidad.Enabled = false;
+            txtClave.Focus();
             txtClave.Enabled = false;
             txtNombre.Enabled = false;
             txtPUnitario.Enabled = false;
@@ -49,6 +50,7 @@ namespace VERONICASBOUTIQUE
         {
             txtCantidad.Enabled = true;
             txtClave.Enabled = true;
+            txtClave.Focus();
             txtNombre.Enabled = true;
             txtPUnitario.Enabled = true;
             txtTipo.Enabled = true;
@@ -60,6 +62,7 @@ namespace VERONICASBOUTIQUE
         {
             txtCantidad.Enabled = false;
             txtClave.Enabled = true;
+            txtClave.Focus();
             txtNombre.Enabled = false;
             txtPUnitario.Enabled = false;
             txtTipo.Enabled = false;
@@ -78,6 +81,16 @@ namespace VERONICASBOUTIQUE
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void txtClave_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                ListadeUsuarios Lista = new ListadeUsuarios("Productos");
+                Lista.Show();
+                this.Hide();
+            }
         }
     }
 }
