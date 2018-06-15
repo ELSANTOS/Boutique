@@ -48,11 +48,7 @@ namespace VERONICASBOUTIQUE
             this.Hide();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+        
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -79,7 +75,7 @@ namespace VERONICASBOUTIQUE
 
         private void btnListaUsuario_Click(object sender, EventArgs e)
         {
-            ListadeUsuarios frmLista = new ListadeUsuarios();
+            ListadeUsuarios frmLista = new ListadeUsuarios("usuarios");
             frmLista.Show();
             this.Hide();
         }
@@ -88,6 +84,12 @@ namespace VERONICASBOUTIQUE
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

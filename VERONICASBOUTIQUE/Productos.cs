@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace VERONICASBOUTIQUE
 {
@@ -15,6 +16,13 @@ namespace VERONICASBOUTIQUE
         public Productos()
         {
             InitializeComponent();
+            txtCantidad.Enabled = false;
+            txtClave.Enabled = false;
+            txtNombre.Enabled = false;
+            txtPUnitario.Enabled = false;
+            txtTipo.Enabled = false;
+            gbxUMedida.Enabled = false;
+            pbxFoto.Enabled = false;
         }
 
         private void btnPrincipal_Click(object sender, EventArgs e)
@@ -28,6 +36,48 @@ namespace VERONICASBOUTIQUE
         {
             lblHora.Text = DateTime.Now.ToLongTimeString();
             lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnListaUsuario_Click(object sender, EventArgs e)
+        {
+            ListadeUsuarios frmLista = new ListadeUsuarios("Productos");
+            frmLista.Show();
+            this.Hide();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            txtCantidad.Enabled = true;
+            txtClave.Enabled = true;
+            txtNombre.Enabled = true;
+            txtPUnitario.Enabled = true;
+            txtTipo.Enabled = true;
+            gbxUMedida.Enabled = true;
+            pbxFoto.Enabled = true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            txtCantidad.Enabled = false;
+            txtClave.Enabled = true;
+            txtNombre.Enabled = false;
+            txtPUnitario.Enabled = false;
+            txtTipo.Enabled = false;
+            gbxUMedida.Enabled = false;
+            pbxFoto.Enabled = false;
+        }
+
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -44,29 +46,27 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPUnitario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.gbxUMedida = new System.Windows.Forms.GroupBox();
+            this.rdbPieza = new System.Windows.Forms.RadioButton();
+            this.rdbMetro = new System.Windows.Forms.RadioButton();
+            this.pbxFoto = new System.Windows.Forms.PictureBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
             this.tmrFechaHora = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gbxUMedida.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,6 +79,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(476, 37);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("American Captain", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(332, 9);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(0, 29);
+            this.lblHora.TabIndex = 3;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("American Captain", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(35, 4);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(0, 29);
+            this.lblFecha.TabIndex = 2;
             // 
             // panel7
             // 
@@ -179,6 +198,7 @@
             this.btnListaUsuario.Text = "Lista Productos";
             this.btnListaUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListaUsuario.UseVisualStyleBackColor = false;
+            this.btnListaUsuario.Click += new System.EventHandler(this.btnListaUsuario_Click);
             // 
             // panel5
             // 
@@ -236,6 +256,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -252,13 +273,14 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // textBox5
+            // txtPUnitario
             // 
-            this.textBox5.Location = new System.Drawing.Point(85, 228);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(68, 20);
-            this.textBox5.TabIndex = 66;
+            this.txtPUnitario.Location = new System.Drawing.Point(85, 228);
+            this.txtPUnitario.Name = "txtPUnitario";
+            this.txtPUnitario.Size = new System.Drawing.Size(68, 20);
+            this.txtPUnitario.TabIndex = 66;
             // 
             // label6
             // 
@@ -269,54 +291,54 @@
             this.label6.TabIndex = 65;
             this.label6.Text = "Precio Unitario";
             // 
-            // groupBox1
+            // gbxUMedida
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(48, 294);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(147, 57);
-            this.groupBox1.TabIndex = 63;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "U. Medida";
+            this.gbxUMedida.Controls.Add(this.rdbPieza);
+            this.gbxUMedida.Controls.Add(this.rdbMetro);
+            this.gbxUMedida.Location = new System.Drawing.Point(48, 294);
+            this.gbxUMedida.Name = "gbxUMedida";
+            this.gbxUMedida.Size = new System.Drawing.Size(147, 57);
+            this.gbxUMedida.TabIndex = 63;
+            this.gbxUMedida.TabStop = false;
+            this.gbxUMedida.Text = "U. Medida";
             // 
-            // radioButton2
+            // rdbPieza
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(84, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(54, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pza(s)";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbPieza.AutoSize = true;
+            this.rdbPieza.Location = new System.Drawing.Point(84, 19);
+            this.rdbPieza.Name = "rdbPieza";
+            this.rdbPieza.Size = new System.Drawing.Size(54, 17);
+            this.rdbPieza.TabIndex = 1;
+            this.rdbPieza.TabStop = true;
+            this.rdbPieza.Text = "Pza(s)";
+            this.rdbPieza.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdbMetro
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(63, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Metro(s)";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbMetro.AutoSize = true;
+            this.rdbMetro.Location = new System.Drawing.Point(6, 19);
+            this.rdbMetro.Name = "rdbMetro";
+            this.rdbMetro.Size = new System.Drawing.Size(63, 17);
+            this.rdbMetro.TabIndex = 0;
+            this.rdbMetro.TabStop = true;
+            this.rdbMetro.Text = "Metro(s)";
+            this.rdbMetro.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // pbxFoto
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(313, 149);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(138, 152);
-            this.pictureBox2.TabIndex = 62;
-            this.pictureBox2.TabStop = false;
+            this.pbxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxFoto.Location = new System.Drawing.Point(313, 149);
+            this.pbxFoto.Name = "pbxFoto";
+            this.pbxFoto.Size = new System.Drawing.Size(138, 152);
+            this.pbxFoto.TabIndex = 62;
+            this.pbxFoto.TabStop = false;
             // 
-            // textBox4
+            // txtCantidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(85, 253);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(68, 20);
-            this.textBox4.TabIndex = 61;
+            this.txtCantidad.Location = new System.Drawing.Point(85, 253);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(68, 20);
+            this.txtCantidad.TabIndex = 61;
             // 
             // label4
             // 
@@ -327,12 +349,12 @@
             this.label4.TabIndex = 60;
             this.label4.Text = "Cantidad";
             // 
-            // textBox3
+            // txtTipo
             // 
-            this.textBox3.Location = new System.Drawing.Point(85, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 20);
-            this.textBox3.TabIndex = 59;
+            this.txtTipo.Location = new System.Drawing.Point(85, 202);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(136, 20);
+            this.txtTipo.TabIndex = 59;
             // 
             // label3
             // 
@@ -343,19 +365,19 @@
             this.label3.TabIndex = 58;
             this.label3.Text = "Tipo";
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 57;
+            this.txtNombre.Location = new System.Drawing.Point(85, 174);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(136, 20);
+            this.txtNombre.TabIndex = 57;
             // 
-            // textBox1
+            // txtClave
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 56;
+            this.txtClave.Location = new System.Drawing.Point(85, 147);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(68, 20);
+            this.txtClave.TabIndex = 56;
             // 
             // label2
             // 
@@ -393,24 +415,6 @@
             this.label8.TabIndex = 72;
             this.label8.Text = "Foto / Color";
             // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("American Captain", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(332, 9);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(0, 29);
-            this.lblHora.TabIndex = 3;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("American Captain", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(35, 4);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(0, 29);
-            this.lblFecha.TabIndex = 2;
-            // 
             // tmrFechaHora
             // 
             this.tmrFechaHora.Enabled = true;
@@ -428,17 +432,17 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtPUnitario);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.gbxUMedida);
+            this.Controls.Add(this.pbxFoto);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -450,9 +454,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gbxUMedida.ResumeLayout(false);
+            this.gbxUMedida.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,18 +479,18 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPUnitario;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.GroupBox gbxUMedida;
+        private System.Windows.Forms.RadioButton rdbPieza;
+        private System.Windows.Forms.RadioButton rdbMetro;
+        private System.Windows.Forms.PictureBox pbxFoto;
+        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;

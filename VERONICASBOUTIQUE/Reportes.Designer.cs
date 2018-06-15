@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -47,10 +49,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnPrincipal = new System.Windows.Forms.Button();
             this.tmrFechaHora = new System.Windows.Forms.Timer(this.components);
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
+            this.pnlSubMenu = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnReporteVentas = new System.Windows.Forms.Button();
+            this.btnReporteInventarios = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnlSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,6 +69,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 37);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("American Captain", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(346, 4);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(0, 29);
+            this.lblHora.TabIndex = 3;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("American Captain", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(36, 4);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(0, 29);
+            this.lblFecha.TabIndex = 2;
             // 
             // button1
             // 
@@ -154,6 +179,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.pnlSubMenu);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnNuevo);
             this.panel2.Controls.Add(this.label3);
@@ -164,7 +190,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 37);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(464, 82);
+            this.panel2.Size = new System.Drawing.Size(464, 88);
             this.panel2.TabIndex = 61;
             // 
             // panel3
@@ -190,6 +216,7 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // label3
             // 
@@ -224,6 +251,7 @@
             this.btnListaUsuario.Text = "Lista Reportes";
             this.btnListaUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListaUsuario.UseVisualStyleBackColor = false;
+            this.btnListaUsuario.Click += new System.EventHandler(this.btnListaUsuario_Click);
             // 
             // panel5
             // 
@@ -255,23 +283,65 @@
             this.tmrFechaHora.Enabled = true;
             this.tmrFechaHora.Tick += new System.EventHandler(this.tmrFechaHora_Tick);
             // 
-            // lblHora
+            // pnlSubMenu
             // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("American Captain", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(346, 4);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(0, 29);
-            this.lblHora.TabIndex = 3;
+            this.pnlSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pnlSubMenu.Controls.Add(this.panel10);
+            this.pnlSubMenu.Controls.Add(this.panel9);
+            this.pnlSubMenu.Controls.Add(this.btnReporteInventarios);
+            this.pnlSubMenu.Controls.Add(this.btnReporteVentas);
+            this.pnlSubMenu.Location = new System.Drawing.Point(165, 17);
+            this.pnlSubMenu.Name = "pnlSubMenu";
+            this.pnlSubMenu.Size = new System.Drawing.Size(79, 49);
+            this.pnlSubMenu.TabIndex = 71;
             // 
-            // lblFecha
+            // panel9
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("American Captain", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(36, 4);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(0, 29);
-            this.lblFecha.TabIndex = 2;
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel9.Location = new System.Drawing.Point(68, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(11, 22);
+            this.panel9.TabIndex = 53;
+            // 
+            // btnReporteVentas
+            // 
+            this.btnReporteVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnReporteVentas.FlatAppearance.BorderSize = 0;
+            this.btnReporteVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnReporteVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteVentas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReporteVentas.Location = new System.Drawing.Point(1, 0);
+            this.btnReporteVentas.Name = "btnReporteVentas";
+            this.btnReporteVentas.Size = new System.Drawing.Size(75, 22);
+            this.btnReporteVentas.TabIndex = 54;
+            this.btnReporteVentas.Text = "Ventas";
+            this.btnReporteVentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporteVentas.UseVisualStyleBackColor = false;
+            this.btnReporteVentas.Click += new System.EventHandler(this.btnReporteVentas_Click);
+            // 
+            // btnReporteInventarios
+            // 
+            this.btnReporteInventarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnReporteInventarios.FlatAppearance.BorderSize = 0;
+            this.btnReporteInventarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnReporteInventarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteInventarios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReporteInventarios.Location = new System.Drawing.Point(0, 25);
+            this.btnReporteInventarios.Name = "btnReporteInventarios";
+            this.btnReporteInventarios.Size = new System.Drawing.Size(76, 22);
+            this.btnReporteInventarios.TabIndex = 73;
+            this.btnReporteInventarios.Text = "Inventarios";
+            this.btnReporteInventarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporteInventarios.UseVisualStyleBackColor = false;
+            this.btnReporteInventarios.Click += new System.EventHandler(this.btnReporteInventarios_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel10.Location = new System.Drawing.Point(68, 23);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(11, 26);
+            this.panel10.TabIndex = 72;
             // 
             // Reportes
             // 
@@ -297,6 +367,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +395,10 @@
         private System.Windows.Forms.Timer tmrFechaHora;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Panel pnlSubMenu;
+        private System.Windows.Forms.Button btnReporteInventarios;
+        private System.Windows.Forms.Button btnReporteVentas;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
     }
 }

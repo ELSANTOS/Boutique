@@ -33,12 +33,12 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblLista = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btnPrincipal = new System.Windows.Forms.Button();
             this.tmrFechaHora = new System.Windows.Forms.Timer(this.components);
             this.txtCoincidir = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPrincipal = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,6 +55,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(476, 37);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // lblHora
             // 
@@ -78,7 +79,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblLista);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.btnPrincipal);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -87,15 +88,15 @@
             this.panel2.Size = new System.Drawing.Size(476, 83);
             this.panel2.TabIndex = 56;
             // 
-            // label3
+            // lblLista
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("American Captain", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(238, 42);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "LISTA DE USUARIOS";
+            this.lblLista.AutoSize = true;
+            this.lblLista.Font = new System.Drawing.Font("American Captain", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLista.Location = new System.Drawing.Point(2, 20);
+            this.lblLista.Name = "lblLista";
+            this.lblLista.Size = new System.Drawing.Size(117, 42);
+            this.lblLista.TabIndex = 42;
+            this.lblLista.Text = "LISTA DE";
             // 
             // panel8
             // 
@@ -104,6 +105,23 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(80, 16);
             this.panel8.TabIndex = 37;
+            // 
+            // btnPrincipal
+            // 
+            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPrincipal.FlatAppearance.BorderSize = 0;
+            this.btnPrincipal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrincipal.Image = global::VERONICASBOUTIQUE.Properties.Resources.BACK;
+            this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPrincipal.Location = new System.Drawing.Point(394, 15);
+            this.btnPrincipal.Name = "btnPrincipal";
+            this.btnPrincipal.Size = new System.Drawing.Size(78, 68);
+            this.btnPrincipal.TabIndex = 38;
+            this.btnPrincipal.Text = "Regresar";
+            this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPrincipal.UseVisualStyleBackColor = false;
+            this.btnPrincipal.Click += new System.EventHandler(this.btnPrincipal_Click);
             // 
             // tmrFechaHora
             // 
@@ -125,22 +143,6 @@
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 58;
             this.label1.Text = "Coincidir con:";
-            // 
-            // btnPrincipal
-            // 
-            this.btnPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPrincipal.FlatAppearance.BorderSize = 0;
-            this.btnPrincipal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrincipal.Image = global::VERONICASBOUTIQUE.Properties.Resources.BACK;
-            this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPrincipal.Location = new System.Drawing.Point(394, 15);
-            this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(78, 68);
-            this.btnPrincipal.TabIndex = 38;
-            this.btnPrincipal.Text = "Regresar";
-            this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnPrincipal.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -165,6 +167,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListadeUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Usuarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -180,7 +183,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblLista;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnPrincipal;
         private System.Windows.Forms.Label lblHora;
