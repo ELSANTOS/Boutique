@@ -63,6 +63,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tmrFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.gbxUMedida.SuspendLayout();
@@ -77,7 +79,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(476, 37);
+            this.panel1.Size = new System.Drawing.Size(552, 37);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -150,7 +152,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnListaUsuario);
             this.panel2.Controls.Add(this.panel5);
@@ -162,7 +166,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 37);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(476, 83);
+            this.panel2.Size = new System.Drawing.Size(552, 83);
             this.panel2.TabIndex = 67;
             // 
             // label7
@@ -178,7 +182,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel4.Location = new System.Drawing.Point(318, 0);
+            this.panel4.Location = new System.Drawing.Point(395, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(78, 16);
             this.panel4.TabIndex = 40;
@@ -191,9 +195,9 @@
             this.btnListaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListaUsuario.Image = global::VERONICASBOUTIQUE.Properties.Resources.USERLIST;
             this.btnListaUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnListaUsuario.Location = new System.Drawing.Point(318, 12);
+            this.btnListaUsuario.Location = new System.Drawing.Point(395, 12);
             this.btnListaUsuario.Name = "btnListaUsuario";
-            this.btnListaUsuario.Size = new System.Drawing.Size(78, 71);
+            this.btnListaUsuario.Size = new System.Drawing.Size(78, 70);
             this.btnListaUsuario.TabIndex = 41;
             this.btnListaUsuario.Text = "Lista Productos";
             this.btnListaUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -203,7 +207,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel5.Location = new System.Drawing.Point(396, 0);
+            this.panel5.Location = new System.Drawing.Point(473, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(78, 16);
             this.panel5.TabIndex = 37;
@@ -216,9 +220,9 @@
             this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrincipal.Image = global::VERONICASBOUTIQUE.Properties.Resources.HOME1;
             this.btnPrincipal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPrincipal.Location = new System.Drawing.Point(396, 15);
+            this.btnPrincipal.Location = new System.Drawing.Point(473, 15);
             this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(78, 68);
+            this.btnPrincipal.Size = new System.Drawing.Size(78, 67);
             this.btnPrincipal.TabIndex = 38;
             this.btnPrincipal.Text = "Menu Principal";
             this.btnPrincipal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -228,7 +232,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel3.Location = new System.Drawing.Point(240, 0);
+            this.panel3.Location = new System.Drawing.Point(317, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(78, 16);
             this.panel3.TabIndex = 37;
@@ -249,9 +253,9 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = global::VERONICASBOUTIQUE.Properties.Resources.DELETE;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(240, 12);
+            this.btnEliminar.Location = new System.Drawing.Point(317, 12);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(78, 71);
+            this.btnEliminar.Size = new System.Drawing.Size(78, 70);
             this.btnEliminar.TabIndex = 38;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -268,7 +272,7 @@
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAgregar.Location = new System.Drawing.Point(162, 12);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(78, 71);
+            this.btnAgregar.Size = new System.Drawing.Size(78, 70);
             this.btnAgregar.TabIndex = 36;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -327,7 +331,7 @@
             // pbxFoto
             // 
             this.pbxFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxFoto.Location = new System.Drawing.Point(313, 149);
+            this.pbxFoto.Location = new System.Drawing.Point(337, 149);
             this.pbxFoto.Name = "pbxFoto";
             this.pbxFoto.Size = new System.Drawing.Size(138, 152);
             this.pbxFoto.TabIndex = 62;
@@ -410,23 +414,47 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(311, 133);
+            this.label8.Location = new System.Drawing.Point(379, 209);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.Size = new System.Drawing.Size(68, 13);
             this.label8.TabIndex = 72;
-            this.label8.Text = "Foto / Color";
+            this.label8.Text = "Agregar Foto";
             // 
             // tmrFechaHora
             // 
             this.tmrFechaHora.Enabled = true;
             this.tmrFechaHora.Tick += new System.EventHandler(this.tmrFechaHora_Tick);
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel9.Location = new System.Drawing.Point(239, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(78, 16);
+            this.panel9.TabIndex = 73;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Image = global::VERONICASBOUTIQUE.Properties.Resources.EDIT;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(239, 15);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(78, 67);
+            this.btnEditar.TabIndex = 74;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(224)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(476, 442);
+            this.ClientSize = new System.Drawing.Size(552, 442);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnCancelar);
@@ -499,5 +527,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer tmrFechaHora;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

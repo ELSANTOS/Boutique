@@ -13,10 +13,12 @@ namespace VERONICASBOUTIQUE
 {
     public partial class Principal : Form
     {
+        ClassConexion miConexion = new ClassConexion();
         public Principal()
         {
             InitializeComponent();
             tmrFechaHora.Start();
+
         }
 
         private void pbxSalir_Click(object sender, EventArgs e)
