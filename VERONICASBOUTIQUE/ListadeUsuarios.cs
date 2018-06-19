@@ -13,6 +13,7 @@ namespace VERONICASBOUTIQUE
 {
     public partial class ListadeUsuarios : Form
     {
+        ClaseBuscarCoincidencia Coincidir = new ClaseBuscarCoincidencia();
         string Reg;
         public ListadeUsuarios(string reg)
         {
@@ -20,6 +21,8 @@ namespace VERONICASBOUTIQUE
             Reg = reg;
             lblLista.Text = "LISTA DE " + reg.ToUpper();
             txtCoincidir.Focus();
+            dgvLista.DataSource= Coincidir.BuscarTodos();
+
         }
 
         private void pbxRegresar_Click(object sender, EventArgs e)
@@ -71,6 +74,12 @@ namespace VERONICASBOUTIQUE
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }   
+        }
+
+        private void txtCoincidir_TextChanged(object sender, EventArgs e)
+        {
+            dgvLista.DataSource = Coincidir.Coincidir(txtCoincidir.Text);
+            dgvLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
     }
 }

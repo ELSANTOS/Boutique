@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaseBuscarCoincidencia.cs" />
     <Compile Include="ClassConexion.cs" />
     <Compile Include="ClassProductos.cs" />
     <Compile Include="ClassReportes.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globales.cs" />
     <Compile Include="ListadeUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +214,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EDIT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SEARCH.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

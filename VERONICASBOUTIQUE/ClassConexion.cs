@@ -35,8 +35,6 @@ namespace VERONICASBOUTIQUE
                 }
                 //Abre la conexion
                 
-                MessageBox.Show("Conexion Abierta");
-                
             }
             catch (Exception x)
             {
@@ -57,7 +55,6 @@ namespace VERONICASBOUTIQUE
                 {
                     con.Close();
                 }
-                MessageBox.Show("Conexion cerrada");
             }
             catch (Exception x)
             {

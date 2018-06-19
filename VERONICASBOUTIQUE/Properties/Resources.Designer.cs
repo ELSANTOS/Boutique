@@ -253,6 +253,26 @@ namespace VERONICASBOUTIQUE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SEARCH {
+            get {
+                object obj = ResourceManager.GetObject("SEARCH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SEARCH1 {
+            get {
+                object obj = ResourceManager.GetObject("SEARCH1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap START {
             get {
                 object obj = ResourceManager.GetObject("START", resourceCulture);

@@ -39,10 +39,10 @@
             this.tmrFechaHora = new System.Windows.Forms.Timer(this.components);
             this.txtCoincidir = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLista = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -134,6 +134,7 @@
             this.txtCoincidir.Name = "txtCoincidir";
             this.txtCoincidir.Size = new System.Drawing.Size(100, 20);
             this.txtCoincidir.TabIndex = 57;
+            this.txtCoincidir.TextChanged += new System.EventHandler(this.txtCoincidir_TextChanged);
             // 
             // label1
             // 
@@ -144,13 +145,13 @@
             this.label1.TabIndex = 58;
             this.label1.Text = "Coincidir con:";
             // 
-            // dataGridView1
+            // dgvLista
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 171);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 233);
-            this.dataGridView1.TabIndex = 59;
+            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Location = new System.Drawing.Point(17, 171);
+            this.dgvLista.Name = "dgvLista";
+            this.dgvLista.Size = new System.Drawing.Size(443, 233);
+            this.dgvLista.TabIndex = 59;
             // 
             // ListadeUsuarios
             // 
@@ -160,7 +161,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(224)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(476, 440);
             this.ControlBox = false;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCoincidir);
             this.Controls.Add(this.panel2);
@@ -173,7 +174,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +192,6 @@
         private System.Windows.Forms.Timer tmrFechaHora;
         private System.Windows.Forms.TextBox txtCoincidir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLista;
     }
 }
