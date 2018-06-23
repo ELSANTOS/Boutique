@@ -35,19 +35,18 @@ namespace VERONICASBOUTIQUE
             }
             else
             {
-                miGlobal.usuario = txtUsuario.Text;
-                miGlobal.password = txtContra.Text;
                 DataTable DT = new DataTable();
-                DT = miUsuario.IniciarSesion(miGlobal.usuario);
+                DT = miUsuario.IniciarSesion(txtUsuario.Text);
                 DataRow Res = DT.Rows[0];
                 if (DT.Rows.Count > 0)
                 {
                     Us = Convert.ToString(Res["USUARIO"]);
                     Ps = Convert.ToString(Res["CONTRASENA"]);
-                    miGlobal.foto = miUsuario.BuscarImagenLoad(Us);
+                    
                 }
-                if ((Us.Equals(miGlobal.usuario)) && (Ps.Equals(miGlobal.password)))
+                if ((Us.Equals(txtUsuario.Text)) && (Ps.Equals(txtContra.Text)))
                 {
+                    miGlobal.GuardarGlobales( txtUsuario.Text, txtContra.Text, miUsuario.BuscarImagenLoad(Us));
                     Principal frmPrincipal = new Principal();
                     frmPrincipal.Show();
                     this.Hide();

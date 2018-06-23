@@ -13,7 +13,7 @@ namespace VERONICASBOUTIQUE
 {
     public partial class ListadeUsuarios : Form
     {
-        ClaseBuscarCoincidencia Coincidir = new ClaseBuscarCoincidencia();
+        ClassUsuarios CoincidirUs = new ClassUsuarios();
         string Reg;
         public ListadeUsuarios(string reg)
         {
@@ -21,7 +21,7 @@ namespace VERONICASBOUTIQUE
             Reg = reg;
             lblLista.Text = "LISTA DE " + reg.ToUpper();
             txtCoincidir.Focus();
-            dgvLista.DataSource= Coincidir.BuscarTodos();
+            dgvLista.DataSource= CoincidirUs.BuscarTodos();
 
         }
 
@@ -78,7 +78,7 @@ namespace VERONICASBOUTIQUE
 
         private void txtCoincidir_TextChanged(object sender, EventArgs e)
         {
-            dgvLista.DataSource = Coincidir.Coincidir(txtCoincidir.Text);
+            dgvLista.DataSource = CoincidirUs.Coincidir(txtCoincidir.Text);
             dgvLista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }

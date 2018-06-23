@@ -10,26 +10,32 @@ namespace VERONICASBOUTIQUE
 {
     class Globales
     {
-        private string Usuario;
-        private string Password;
-        private Image Foto;
-        
-        public string password
+        public Globales()
         {
-            get { return Password; }
-            set { Password = value; }
+
+        }
+        private string pASSWORD;
+        private string uSUARIO;
+        private Image fOTO;
+
+        //public string PASSWORD { get { return pASSWORD; } set { pASSWORD = value; } }
+        //public string USUARIO { get { return uSUARIO; } set { uSUARIO = value; } }
+        //public Image FOTO { get { return fOTO; } set { fOTO = value; } }
+
+        public void GuardarGlobales(string Us, string Contra, Image Fot)
+        {
+            pASSWORD = Contra;
+            uSUARIO = Us;
+            fOTO = Fot;
+        }
+        public string MostrarUsuario ()
+        {
+            return uSUARIO;
         }
 
-        public string usuario
+        public Image mostrarFoto()
         {
-            get { return Usuario; }
-            set { Usuario = value; }
-        }
-
-        public Image foto
-        {
-            get { return Foto; }
-            set { Foto = value; }
+            return fOTO;
         }
     }
 }

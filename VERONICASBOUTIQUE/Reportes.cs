@@ -67,5 +67,10 @@ namespace VERONICASBOUTIQUE
         {
             pnlSubMenu.Visible = false;
         }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            pnlSubMenu.Visible = false;
+        }
     }
 }

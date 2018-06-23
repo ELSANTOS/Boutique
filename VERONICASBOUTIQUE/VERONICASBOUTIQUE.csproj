@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClaseBuscarCoincidencia.cs" />
     <Compile Include="ClassConexion.cs" />
     <Compile Include="ClassProductos.cs" />
     <Compile Include="ClassReportes.cs" />
@@ -66,6 +65,12 @@
     </Compile>
     <Compile Include="ListadeUsuarios.Designer.cs">
       <DependentUpon>ListadeUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -109,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadeUsuarios.resx">
       <DependentUpon>ListadeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

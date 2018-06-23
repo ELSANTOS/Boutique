@@ -13,6 +13,11 @@ namespace VERONICASBOUTIQUE
 {
     public partial class Productos : Form
     {
+        bool btnAdd = false;
+        bool btnEdit = false;
+        bool btnDel = false;
+        bool btnSearch = false;
+
         public Productos()
         {
             InitializeComponent();
@@ -56,6 +61,18 @@ namespace VERONICASBOUTIQUE
             txtTipo.Enabled = true;
             gbxUMedida.Enabled = true;
             pbxFoto.Enabled = true;
+
+            lblAccion.Text = "AGREGAR";
+           
+            pbxFoto.Image = null;
+            btnAdd = true;
+            btnEdit = false;
+            btnDel = false;
+            btnSearch = false;
+           
+            btnAceptar.Enabled = true;
+            pbxFoto.Enabled = true;
+            btnCancelar.Enabled = true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

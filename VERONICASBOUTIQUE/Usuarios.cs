@@ -146,6 +146,11 @@ namespace VERONICASBOUTIQUE
                         pbxFoto.Image = Foto;
                         pbxFoto.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
+                    else
+                    {
+                        MessageBox.Show("NO SE ENCONTRO USUARIO","INFORMACIÓN",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        btnBuscar.PerformClick();
+                    }
                 }
                 else
                 {

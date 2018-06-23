@@ -14,11 +14,13 @@ namespace VERONICASBOUTIQUE
     public partial class Principal : Form
     {
         ClassConexion miConexion = new ClassConexion();
+        Globales miGlobal = new Globales();
         public Principal()
         {
             InitializeComponent();
+            pbxFotoUsuario.Image = miGlobal.mostrarFoto();
+            lblUsuario.Text = miGlobal.MostrarUsuario();
             tmrFechaHora.Start();
-
         }
 
         private void pbxSalir_Click(object sender, EventArgs e)
@@ -71,11 +73,6 @@ namespace VERONICASBOUTIQUE
             this.Hide();
         }
 
-        private void tmrFechaHora_Tick(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             Usuarios frmUsuarios = new Usuarios();
@@ -101,6 +98,19 @@ namespace VERONICASBOUTIQUE
         {
             PVenta frmPVenta = new PVenta();
             frmPVenta.Show();
+            this.Hide();
+        }
+
+        private void tmrFechaHora_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+        }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            Pagos frmPagos = new Pagos();
+            frmPagos.Show();
             this.Hide();
         }
     }

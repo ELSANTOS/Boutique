@@ -185,5 +185,31 @@ namespace VERONICASBOUTIQUE
             }
         }
 
+        public DataTable BuscarTodos()
+        {
+            string SQLString = "SELECT CLAVE_US, NOMBRE_US, APELLIDOPAT_US, APELLIDOMAT_US FROM USUARIOS ORDER BY CLAVE_US ASC";
+
+            DataTable DT = new DataTable();
+            con = miConexion.Conectar();
+            FbDataAdapter Ada;
+            Ada = new FbDataAdapter(SQLString, con);
+            Ada.Fill(DT);
+
+            return DT;
+        }
+
+        public DataTable Coincidir(string Cadena)
+        {
+            string SQLString = "SELECT CLAVE_US, NOMBRE_US, APELLIDOPAT_US, APELLIDOMAT_US FROM USUARIOS WHERE NOMBRE_US LIKE '%" + Cadena + "%' OR APELLIDOPAT_US LIKE '%" + Cadena + "%' ORDER BY CLAVE_US ASC";
+
+            DataTable DT = new DataTable();
+            con = miConexion.Conectar();
+            FbDataAdapter Ada;
+            Ada = new FbDataAdapter(SQLString, con);
+            Ada.Fill(DT);
+
+            return DT;
+        }
+
     }
 }
